@@ -91,6 +91,14 @@ call_user_func( function () {
 		$setupAfterCache->process();
 	};
 
+	$egChameleonAvailableLayoutFiles = [
+	'standard'   => __DIR__ . '/skins/chameleon/layouts/standard.xml',
+	'navhead'    => __DIR__ . '/skins/chameleon/layouts/navhead.xml',
+	'fixedhead'  => __DIR__ . '/skins/chameleon/layouts/fixedhead.xml',
+	'stickyhead' => __DIR__ . '/skins/chameleon/layouts/stickyhead.xml',
+	'clean'      => __DIR__ . '/skins/chameleon/layouts/clean.xml',
+	];
+	
 	// set default skin layout
 	$GLOBALS[ 'egChameleonLayoutFile' ] = dirname( __FILE__ ) . '/layouts/standard.xml';
 
