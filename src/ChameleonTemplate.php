@@ -233,4 +233,43 @@ class ChameleonTemplate extends BaseTemplate {
 
 		return parent::makeListItem( $key, $item, $options );
 	}
+							  
+	//AIFB-Methoden
+	function isEnglish($href){
+
+    if(preg_match('/\/en(&.*)*$/', $href)){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+function getInfoboxes($english){
+    global $wgUser,$wgTitle,$wgParser;
+
+    $infoboxes = array();
+
+    //	$side = new Article(Title::newFromText('Infobox',NS_MEDIAWIKI));
+    //	$text = $side->fetchContent();
+    //remove html comments
+    //	$text = preg_replace ('/<!--(.|\s)*?-->/', '', $text);
+    if($english){
+        $text = wfMessage( 'infobox-en' )->inContentLanguage()->text();
+    }else{
+        $text = wfMessage( 'infobox' )->inContentLanguage()->text();
+    }
+    preg_match_all('%\<infobox\>(.*)\</infobox\>%isU', $text, $matches);
+
+    //get parser ready
+    if (is_object($wgParser)) { $psr = $wgParser; $opt = $wgParser->mOptions; }
+    else { $psr = new Parser; $opt = NULL; }
+    if (!is_object($opt)) $opt = ParserOptions::newFromUser($wgUser);
+
+    foreach($matches[1] as $rawinfobox){
+        $infoboxes[] = $psr->parse($rawinfobox,$wgTitle,$opt,true,true)->getText();
+    }
+
+    return $infoboxes;
+}
+
 }
