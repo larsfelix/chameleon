@@ -168,7 +168,7 @@ class ChameleonTemplate extends BaseTemplate {
                             <?php } ?>	<!--  // end foreach  -->
                         </ul>
                     </div>
-
+		</div>
 		
 	}
 
