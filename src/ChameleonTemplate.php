@@ -141,7 +141,7 @@ class ChameleonTemplate extends BaseTemplate {
                                                        href="<?php echo htmlspecialchars($val2['href']) ?>"
                                                         <?php echo $skin->tooltipAndAccesskey($val2['id']) ?>><?php if($english){echo htmlspecialchars($val2['textengl']);}else{echo htmlspecialchars($val2['text']);} ?></a>
 
-                                                    <?php if(isset($val2['nlevel'])){?>
+                                                    <?php if(isset($val2['nlevel'])){ ?>
                                                         <ul>
                                                             <?php foreach($val2['nlevel'] as $key3 => $val3) { ?>
                                                                 <li>
