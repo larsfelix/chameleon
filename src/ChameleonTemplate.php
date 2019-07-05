@@ -36,7 +36,7 @@ use SkinChameleon;
  * @since 1.0
  * @ingroup Skins
  */
-class ChameleonTemplate extends BaseTemplate {
+class ChameleonTemplate extends SkinTemplate {
 
 	/**
 	 * Outputs the entire contents of the page
