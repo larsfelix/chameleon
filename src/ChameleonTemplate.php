@@ -26,7 +26,7 @@
 
 namespace Skins\Chameleon;
 
-use SkinTemplate;
+use BaseTemplate;
 use SkinChameleon;
 
 /**
@@ -36,7 +36,7 @@ use SkinChameleon;
  * @since 1.0
  * @ingroup Skins
  */
-class ChameleonTemplate extends SkinTemplate {
+class ChameleonTemplate extends BaseTemplate {
 
 	/**
 	 * Outputs the entire contents of the page
