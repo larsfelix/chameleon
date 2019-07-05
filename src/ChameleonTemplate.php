@@ -77,7 +77,7 @@ class ChameleonTemplate extends BaseTemplate {
         			$institute_name ='Institute of Applied Informatics and<br>Formal Description Methods (AIFB)';
         			$aifb_home= htmlspecialchars($this->data['nav_urls']['mainpage']['href']).'/en';
         			$english = true;
-   	 		}?>
+   	 		} ?>
 			
 			<div class='pBody'>
                         <ul>
@@ -90,11 +90,11 @@ class ChameleonTemplate extends BaseTemplate {
 					li_level_1_selected_children
 				<?php }else{ ?>
 					li_level_1_selected_no_children
-				<?php }?>
+				<?php } ?>
 
 			<?php }else{ ?>
 				li_level_1_not_selected
-			<?php }?>
+			<?php } ?>
 
 			">
                                     <a
@@ -107,18 +107,18 @@ class ChameleonTemplate extends BaseTemplate {
                                         if ( !isset($val['nlevel']) ) { ?>
                                             has_no_children
                                         <?php }else{
-                                        if($val['active']>0){?>
+                                        if($val['active']>0){ ?>
                                             has_children_open
                                         <?php }else{ ?>
                                             has_children_closed
                                     <?php
-                                    }}?>
+                                    }} ?>
                                     "
 
                                     href="<?php echo htmlspecialchars($val['href']) ?>"
                                     <?php echo $skin->tooltipAndAccesskey($val['id']) ?>><?php if($english){echo htmlspecialchars($val['textengl']);}else{echo htmlspecialchars($val['text']);} ?></a>
 
-                                    <?php if(isset($val['nlevel'])){?>
+                                    <?php if(isset($val['nlevel'])){ ?>
                                         <ul>
                                             <?php foreach($val['nlevel'] as $key2 => $val2) { ?>
                                                 <li>
@@ -131,7 +131,7 @@ class ChameleonTemplate extends BaseTemplate {
 							<?php if( $val2['active'] > 0 ){ ?>
 							 	item_selected
 							<?php } }else{
-                                                        if($val2['active']>0){?>
+                                                        if($val2['active']>0){ ?>
 									selected has_children_open
 								<?php }else{ ?>
 									has_children_closed
@@ -150,7 +150,7 @@ class ChameleonTemplate extends BaseTemplate {
                                                                             class="item_not_selected"
                                                                         <?php }else{ ?>
                                                                             class="item_selected"
-                                                                        <?php }?>
+                                                                        <?php } ?>
                                                                             href="<?php echo htmlspecialchars($val3['href']) ?>"
                                                                         <?php echo $skin->tooltipAndAccesskey($val3['id']) ?>><?php if($english){echo htmlspecialchars($val3['textengl']);}else{echo htmlspecialchars($val3['text']);} ?></a></li>
                                                             <?php } ?>
