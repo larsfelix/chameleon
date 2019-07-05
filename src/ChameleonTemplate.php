@@ -26,7 +26,7 @@
 
 namespace Skins\Chameleon;
 
-use BaseTemplate;
+use SkinTemplate;
 use SkinChameleon;
 
 /**
