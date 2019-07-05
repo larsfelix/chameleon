@@ -170,7 +170,10 @@ class ChameleonTemplate extends BaseTemplate {
                     </div>
 		</div>
 		
-	}
+	<?php
+wfRestoreWarnings();
+} // end of execute() method
+
 
 	/**
 	 * Overrides method in parent class that is unprotected against non-existent indexes in $this->data
