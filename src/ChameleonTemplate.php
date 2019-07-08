@@ -28,6 +28,7 @@ namespace Skins\Chameleon;
 
 use BaseTemplate;
 use SkinChameleon;
+use Sanitizer;
 
 /**
  * BaseTemplate class for the Chameleon skin
