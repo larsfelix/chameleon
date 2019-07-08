@@ -6,6 +6,10 @@
 //
 // @since 2.0
 
+#p-tb {
+	display: none;
+}
+
 .p-navbar {
 
 	@extend .navbar;
