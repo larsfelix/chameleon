@@ -119,4 +119,11 @@ class SkinChameleon extends SkinTemplate {
 	protected function getLayoutFilePath() {
 		return $GLOBALS['egChameleonLayoutFile'];
 	}
+	
+	public function tooltipAndAccesskey($key)
+    	{
+        //throw new Exception('TooltipAndAccesskey not yet implemented!');
+        return $key;
+    	}
+
 }
