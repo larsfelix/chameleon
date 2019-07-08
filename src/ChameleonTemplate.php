@@ -61,7 +61,7 @@ class ChameleonTemplate extends BaseTemplate {
 		wfSuppressWarnings(false);
 		$this->html( 'headelement' );
 		?>
-  		
+  		<script src="<?php echo $wgScriptPath; ?>/skins/chameleon/src/jquery-1.4.2.min.js"></script>
 		<div id="wrapper"><?php
     			#$wiki_uri = htmlspecialchars($_SERVER['REQUEST_URI'],ENT_COMPAT,'UTF-8'); causes problems when a uri contains ü,ö, ä
    	 		$wiki_uri = urldecode($_SERVER['REQUEST_URI']); 
